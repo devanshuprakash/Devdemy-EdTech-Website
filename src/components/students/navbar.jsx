@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { assets } from '../../Assets/assets';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation,  } from 'react-router-dom';
 import { useClerk,UserButton,useUser } from '@clerk/clerk-react';
+import { AppContext } from '../../context/AppContext';
+import Educator from '../../pages/educator/Educator';
 
 function Navbar() {
+  const {navigate,isEducator} =useContext(AppContext)
   const location = useLocation();
   const isCourseListPage = location.pathname.includes('/course-list');
 
@@ -12,14 +15,14 @@ function Navbar() {
 
   return (
     <div className={`flex items-center justify-between px-4 sm:px-10 md:px-14 lg:px-36 border-b border-gray-500 py-4 ${isCourseListPage ? 'bg-white' : 'bg-cyan-100/70'}`}>
-      <img src={assets.logo} alt="logo" className="w-28 lg:w-32 object-contain" />
+      <img onClick={()=> navigate('/')} src={assets.logo} alt="logo" className="w-28 lg:w-32 object-contain" />
 
       <div className="hidden md:flex items-center gap-5 text-gray-500">
 
         <div className="flex items-center gap-5 text-m ">
           {user &&
           <>
-           <button className='hover:underline'>Become Educator |</button> 
+           <button onClick={()=>{navigate('/educator')}} className='hover:underline'>{isEducator? 'Educator Dashboard':'Become Educator'} |</button> 
             <Link to="/my-enrollments" className="hover:underline">My Enrollments</Link>
             </>}
         </div>
@@ -34,7 +37,7 @@ function Navbar() {
         <div>
         {user &&
           <>
-           <button className='hover:underline'>Become Educator |</button> 
+            <button onClick={()=>{navigate('/educator')}} className='hover:underline'>{isEducator? 'Educator Dashboard':'Become Educator'} |</button> 
             <Link to="/my-enrollments" className="hover:underline">My Enrollments</Link>
             </>}
         </div>
