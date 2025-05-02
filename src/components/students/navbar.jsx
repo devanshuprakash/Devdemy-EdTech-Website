@@ -3,7 +3,6 @@ import { assets } from '../../Assets/assets';
 import { Link, useLocation,  } from 'react-router-dom';
 import { useClerk,UserButton,useUser } from '@clerk/clerk-react';
 import { AppContext } from '../../context/AppContext';
-import Educator from '../../pages/educator/Educator';
 
 
 function Navbar() {
