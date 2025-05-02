@@ -5,6 +5,7 @@ import { useClerk,UserButton,useUser } from '@clerk/clerk-react';
 import { AppContext } from '../../context/AppContext';
 import Educator from '../../pages/educator/Educator';
 
+
 function Navbar() {
   const {navigate,isEducator} =useContext(AppContext)
   const location = useLocation();
@@ -15,7 +16,7 @@ function Navbar() {
 
   return (
     <div className={`flex items-center justify-between px-4 sm:px-10 md:px-14 lg:px-36 border-b border-gray-500 py-4 ${isCourseListPage ? 'bg-white' : 'bg-cyan-100/70'}`}>
-      <img onClick={()=> navigate('/')} src={assets.logo} alt="logo" className="w-28 lg:w-32 object-contain" />
+      <img onClick={()=> navigate('/')} src={assets.devdemy_logo} alt="logo" className="w-28 lg:w-32 object-contain" />
 
       <div className="hidden md:flex items-center gap-5 text-gray-500">
 

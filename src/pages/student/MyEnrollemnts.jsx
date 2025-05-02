@@ -2,7 +2,10 @@ import React from 'react'
 
 function MyEnrollemnts() {
   return (
-    <div>MyEnrollemnts</div>
+    <div>
+      hq
+      
+    </div>
   )
 }
 

@@ -29,7 +29,7 @@ function Footer() {
  placeholder-gray-500 outline-none w-64 h-9 rounded px-2 text-sm'/> 
  <button className='bg-blue-600 w-24 h-9 text-white rounded'>Suscribe</button>
       </div></div></div>
-      <p className='py-4 text-center text-xs md:text-sm text-white/60'>Copyright 2024 © Edemy. All Right Reserved.</p>
+      <p className='py-4 text-center text-xs md:text-sm text-white/60'>Copyright 2025 © Edemy. All Right Reserved.</p>
 
     </footer>
 
