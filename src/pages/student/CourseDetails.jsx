@@ -33,7 +33,7 @@ function CourseDetails() {
     }))
   };
 
-  if (!courseData) return <Loading />;
+  if (!courseData) return <loading />;
 
   return (
     <>
